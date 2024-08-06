@@ -15,7 +15,7 @@ public class FibonacciService {
         series.add(seedX);
         series.add(seedY);
 
-        for (int i = 2; i < count; i++) {
+        for (int i = 2; i < count + 2; i++) {
             int next = series.get(i - 1) + series.get(i - 2);
             series.add(next);
         }
