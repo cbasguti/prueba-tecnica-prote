@@ -42,7 +42,7 @@ public class FibonacciController {
 
         List<Integer> fibonacciSeries = fibonacciService.generateFibonacciSeries(seedX, seedY, count);
 
-        FibonacciSequence sequence = new FibonacciSequence(LocalTime.now(), fibonacciSeries.toString());
+        FibonacciSequence sequence = new FibonacciSequence(LocalTime.parse(time), fibonacciSeries.toString());
         fibonacciRepository.save(sequence);
 
         String subject = "Prueba Técnica - Sebastián Gutiérrez Jaramillo";
