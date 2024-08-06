@@ -3,6 +3,7 @@ package com.proteccion.tecnica.service;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -19,7 +20,7 @@ public class FibonacciService {
             series.add(next);
         }
 
-        Collections.sort(series, Collections.reverseOrder());
+        series.sort(Collections.reverseOrder());
 
         return series;
     }
