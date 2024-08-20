@@ -12,6 +12,13 @@ public class FibonacciService {
     public List<Integer> generateFibonacciSeries(int seedX, int seedY, int count) {
         List<Integer> series = new ArrayList<>();
 
+        if (count <= 0) {
+            series.add(seedX);
+            series.add(seedY);
+            series.sort(Collections.reverseOrder());
+            return series;
+        }
+
         series.add(seedX);
         series.add(seedY);
 
